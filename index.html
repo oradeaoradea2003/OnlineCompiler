@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Online Compiler Lucian</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+
+
+<style type="text/css">
+textarea {
+ background-color: yellow;
+ font-size: 0.35em;
+ font-weight: bold;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ border: 1px solid black;
+}
+</style>
+
+<script src=""></script>
+<body>
+
+<div class="w3-container w3-green">
+<h1>Online Compiler </h1>
+</div>
+
+<div class="w3-container w3-green">
+<p1>Paste or upload the C++ code here: </p1>
+
+ <form action="upload_cppfile.php" method="post" enctype="multipart/form-data">
+      <label for="file">Filename:</label>
+      <input type="file" name="file" id="file" /> 
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+</div>
+
+
+<form action="compile.php" method="post">
+<div class="w3-container w3-blue  w3-cell" style="float: left; width: 100%;">
+
+
+<textarea autocomplete="off"  spellcheck="false"  name="idtextarea" id="idtextarea" style="width: 100%;"  rows="15">
+#include <iostream>
+
+int main() {
+    std::cout << "HOLLA ORADEA World\n";
+std::cout << "CIAU LUCIAN ADRIAN\n";
+std::cout << "HOLLA CRACIUNULE\n";
+    return 0;
+}
+</textarea>
+
+</div>
+<div class="w3-container w3-red w3-cell w3-round-xlarge" style="float: left; width: 50%;">
+<input type="submit" class="w3-button w3-green w3-round-xlarge" style="float: left; width: 100%;" id="idbutsubmit" name="idbutsubmit" value="COMPILE and RUN">
+</div>
+</form>
+
+<div class="w3-container w3-red w3-cell w3-round-xlarge" style="float: left; width: 10%;">
+<button class="w3-button w3=blue w3-round-xlarge" id="buttoncopy" name="buttoncopy" >COPY CODE</button>
+</div>
+
+<script>
+
+document.getElementById("buttoncopy").onclick = function(){
+    document.querySelector("textarea").select();
+    document.execCommand('copy');
+document.getElementById("buttoncopy").changeColor('blue');
+}
+</script>
+
+

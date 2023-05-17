@@ -1,0 +1,2 @@
+<h2>jQuery and cucu AJAX is FUN!</h2>
+<p id="p1">This is cucu some text in a paragraph.</p>
